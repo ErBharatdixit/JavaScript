@@ -33,3 +33,28 @@ console.log(typeof myfunction);
 // Refrence (Non primitive)
 
 // Array, Objects, functions
+//************************************************************* */
+
+// stack(primitive), heap(Non-Primitive)
+// stack  in stack we have copy of value
+let myname = "Bharat Dixit"
+
+let anotherName = myname
+console.log(anotherName);
+
+anotherName = "Aman Dixit"
+console.log(myname);
+console.log(anotherName);
+//*********************************************** */ // heap   in heap we have reference of value
+let user1 ={
+    email:"sajnsdnnjd@gmail.com",
+    upi : "dhsfjf@ibl.com"
+}
+
+let user2 = user1;
+
+user2.email = "bharat0102@gmail.com"
+console.log(user1.email);
+console.log(user2.email);
+
+
