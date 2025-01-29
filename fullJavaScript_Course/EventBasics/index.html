@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141;">
+    <h2>Amazing image</h2>
+    <div>
+    <ul id = "images">
+        <li><img width="200px" id ="photoshop" src="https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg" alt="photoshop">
+</li>
+<li><img width="200px" id ="one" src="https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg" alt="photoshop">
+</li>
+<li><img width="200px" id ="two" src="https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg" alt="photoshop">
+</li>
+<li><img width="200px" id ="three" src="https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg" alt="photoshop" >
+</li>
+<li><a href="https://google.com" id="google">Google</a></li>
+
+
+
+
+
+
+
+
+    </ul>
+
+
+
+
+    </div>
+    
+</body>
+<script>
+// document.getElementById('three').onclick = function(){
+//     alert("clicked by bharat")
+// }
+//document.getElementById('three').addEventListener('click',function(e){
+  //  console.log(e);
+//},false)
+//type,timestamp,defaultPrevented
+// target, toElement, currentTarget
+// clientX, clientY, screenX, screenY
+// altkey, ctrlKey, shiftKey, keycode
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log("clicked inside the images");
+// },false)
+
+// document.getElementById('three').addEventListener('click',function(e){
+//     console.log("id three clicked");
+// },false)  // false use for event bubbling true for event capturing 
+// with false starting with inside
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log("clicked inside the images");
+// },true)
+
+// document.getElementById('three').addEventListener('click',function(e){
+//     console.log("id three clicked");
+// },true)
+// // with true starting with outside 
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log("clicked inside the images");
+// },false)
+
+// document.getElementById('three').addEventListener('click',function(e){
+//     console.log("id three clicked")
+//     e.stopPropagation();
+// },false)
+
+// document.getElementById('google').addEventListener('click', function(e){
+    
+
+//     e.preventDefault();
+//     e.stopPropagation();
+//     console.log("clicked google") 
+// },false)
+
+document.getElementById('images').addEventListener('click',function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id)
+        let removeIt = e.target.parentNode
+    removeIt.parentNode.removeChild(removeIt)
+
+    }
+
+   
+    //removeIt.remove()
+},false)
+
+</script>
+</html>
